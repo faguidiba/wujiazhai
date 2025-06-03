@@ -1,0 +1,62 @@
+1.设置名称、邮箱
+git config --global user.name ""
+git config --global user.email ""
+
+2.查看当前名称、邮箱
+git config user.name
+git config user.email
+
+3.克隆远端仓库
+git clone https://github.com/faguidiba/wujiazhai.git
+
+git clone git@github.com:faguidiba/wujiazhai.git
+
+git clone -b 分支名 远程Git仓库地址 
+
+4.查看状态
+git status 
+#查看状态 使输出信息更加简洁
+git status –s 
+
+5.将未跟踪的文件加入暂存区
+git add  <文件名>  
+# 将暂存区的文件取消暂存 (取消 add )
+git reset  <文件名>  
+6. git commit 将暂存区的文件修改提交到本地仓库
+git commit -m "日志信息"  <文件名>  
+7.# 查看远程  列出指定的每一个远程服务器的简写
+git remote 
+# 查看远程 , 列出 简称和地址
+git remote  -v  
+# 查看远程仓库详细地址
+git remote show  <仓库简称>
+8.# 从远程仓库克隆
+git clone <url> 
+# 从远程仓库拉取 (拉取到.git 目录,不会合并到工作区,工作区发生变化)
+git fetch  <shortname>  <分支名称>
+# 手动合并  把某个版本的某个分支合并到当前工作区
+git merge <shortname>/<分支名称>
+# 从远程仓库拉取 (拉取到.git 目录,合并到工作区,工作区不发生变化) = fetch+merge
+git pull  <shortname>  <分支名称>
+git pull  <shortname>  <分支名称>  --allow-unrelated-histories  #  强制拉取合并
+9.# 默认 分支名称为 master
+# 列出所有本地分支
+git branch
+# 列出所有远程分支
+git branch -r
+# 列出所有本地分支和远程分支
+git branch -a
+# 创建分支
+git branch <分支名>
+# 切换分支 
+git checkout <分支名>
+# 删除分支(如果分支已经修改过,则不允许删除)
+git branch -d  <分支名>
+# 强制删除分支
+git branch -D  <分支名>
+10.# 提交分支至远程仓库
+git push <仓库简称> <分支名称>	
+# 合并分支 将其他分支合并至当前工作区
+git merge <分支名称>
+# 删除远程仓库分支
+git push origin –d branchName
