@@ -1,0 +1,25 @@
+1.设置名称、邮箱
+git config --global user.name ""
+git config --global user.email ""
+
+2.查看当前名称、邮箱
+git config user.name
+git config user.email
+
+3.克隆远端仓库
+git clone https://github.com/faguidiba/wujiazhai.git
+
+git clone git@github.com:faguidiba/wujiazhai.git
+
+git clone -b 分支名 远程Git仓库地址 
+
+4.查看状态
+git status 
+#查看状态 使输出信息更加简洁
+git status –s 
+
+5.将未跟踪的文件加入暂存区
+git add  <文件名>  
+# 将暂存区的文件取消暂存 (取消 add )
+git reset  <文件名>  
+6.
