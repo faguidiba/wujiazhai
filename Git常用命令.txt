@@ -22,4 +22,5 @@ git status –s
 git add  <文件名>  
 # 将暂存区的文件取消暂存 (取消 add )
 git reset  <文件名>  
-6.
+6. git commit 将暂存区的文件修改提交到本地仓库
+git commit -m "日志信息"  <文件名>  
